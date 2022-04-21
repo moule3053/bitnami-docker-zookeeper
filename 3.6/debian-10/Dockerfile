@@ -22,6 +22,7 @@ RUN ln -s /opt/bitnami/scripts/zookeeper/run.sh /run.sh
 
 COPY rootfs /
 RUN /opt/bitnami/scripts/zookeeper/postunpack.sh
+RUN chown 1001:1001 -R /bitnami /opt/bitnami/
 ENV APP_VERSION="3.6.3" \
     BITNAMI_APP_NAME="zookeeper"
 
